@@ -1,0 +1,96 @@
+@import "config";
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    margin-top: 80px;
+    width: 100%;
+    margin: auto;
+
+    .price-column{
+        flex: 35%;
+        width: 35%;
+        padding: 0 2px;
+        border: 1px solid $light-grey-color;
+        box-shadow: 1px 3px 5px $light-grey-color;
+        margin: 7px;
+        border-radius: 2px;
+        text-align: center;
+        .price{
+            padding-left: 0;
+            width: 100%;
+            margin:0;
+            .header-grey{
+                background-color: $grey-color;
+                margin: -2px;
+                text-align: center;   
+                padding: 35px;   
+                color: $light-color; 
+                font-size: 20px;
+                font-weight: 600; 
+            }
+            .header-red{
+                background-color: $secondary-color;
+                opacity: .7;
+                margin: -2px;
+                text-align: center;   
+                padding: 35px; 
+                color: $light-color;  
+                font-size: 20px;
+                font-weight: 600;    
+            }
+        
+        }
+        li{
+            text-decoration: none;
+            list-style: none;
+            border-bottom: 1px solid $light-grey-color;
+            padding: 17px;
+        } 
+
+        .grey{
+            padding: 20px;
+            background-color: $grey-color;
+            
+            a{
+                color: $light-color;
+                text-decoration: none;
+            }
+            &:hover {
+                background-color: $dark-color;
+            }
+        }
+        .red{
+            padding: 20px;
+            background-color: $secondary-color;
+            opacity: .7;
+            
+            a{
+                color: $light-color;
+                text-decoration: none;
+            }
+            &:hover {
+                background-color: $dark-color;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+
+
+
+
+@media (max-width: 600px){
+   .row{
+       width: 100%;
+       .price-column {
+        flex: 100%;
+        width: 100%;
+    }
+   } 
+    
+    
+}
+

@@ -1,0 +1,42 @@
+@import "config";
+
+form{
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 2px;
+
+    label{
+        margin-top: 25px;
+        font-size: 15px;
+    }
+    input{
+    width: 100%;
+    padding: 10px;
+    outline-color: $secondary-color;
+
+    
+    }
+    textarea{
+        width: 100%;
+        padding: 10px;
+        outline-color: $secondary-color;
+        
+    }
+    button{
+        width: 100%;
+        margin-top: 20px;
+        padding: 12px;
+        outline-style: none;
+        background-color: $secondary-color;
+        border: none;
+        color: $light-color;
+        opacity: .7;
+        border-radius: 2px;
+
+        &:hover{
+            background-color: $grey-color;
+        }
+    }
+}
+

@@ -1,0 +1,139 @@
+@import "config";
+
+
+.sidebar{
+    z-index: 1;
+    top: 0;
+    background:$secondary-color;
+    opacity: .7;
+    padding-top: 30px;
+    position: fixed;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    overflow-y: auto;
+
+    .profile_info{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;   
+    }
+    .logo{
+        margin-top: 90px;
+        font-size: 40px;
+        width: 140px;
+        font-weight: 700;
+        margin-left: -80px;
+        margin-bottom: 70px;
+        color: $light-color;
+    }
+    .h4{
+        color:$light-color;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+    a{
+        color: $light-color;
+        display: block;
+        width: 100%;
+        line-height: 40px;
+        text-decoration: none;
+        font-size: 19px;
+        font-weight: 600;
+        padding-left: 40px;
+        box-sizing: border-box;
+        transition: 0.5s;
+        transition-property: background;
+        &:hover{
+          background: $dark-color;    
+    }
+} 
+
+i{
+ padding-right: 10px;    
+ }
+}   
+.mobile_nav{
+    display: none;
+}
+
+/* Mobile navigation */
+
+@media screen and (max-width: 1024px){
+    .sidebar{
+        display:none;
+    }
+    #sidebar_btn{
+        display:none;
+    }
+    .wrapper{
+        margin-top: 0;
+        padding: 10px 20px;
+        transition: 0s;
+        width: 100%;
+
+        #check:checked ~ &{
+          margin-left: 0;    
+    }
+}
+.mobile_nav {
+    display: block;
+    width: 100%; 
+    opacity: .7;   
+}
+    .nav_bar {
+        background: $secondary-color;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;   
+
+.mobile_logo{
+    width: 70px;
+    color: $light-color;
+    font-size: 20px;
+}
+.nav_btn{
+    color: $light-color;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.5s;
+    transition-property: color;
+    
+    &:hover {
+      color: $grey-color;   
+  }
+}
+ 
+}
+    .mobile_nav_items {
+        background: $secondary-color;
+        opacity: .8;
+        display: none; 
+        
+        a{
+            color: $light-color;
+            display: block;
+            text-align: center;
+            letter-spacing: 1px;
+            line-height: 45px;
+            text-decoration: none;
+            box-sizing: border-box;
+            transition: 0.5s;
+            transition-property: background; 
+            &:hover {
+                background: $grey-color;  
+                opacity: .8;    
+        }
+        
+        }
+    }
+    i{
+        padding-right: 10px;   
+    }
+}
+.active{
+    display: block;
+ }
